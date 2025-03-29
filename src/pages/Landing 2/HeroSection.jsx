@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 
 const HeroSection = () => {
-  const [scrollDepth, setScrollDepth] = useState(0);
+  const [scrollDepth, setScrollDepth] = useState(0.1);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,12 +22,12 @@ const HeroSection = () => {
         className="absolute inset-0 bg-[url('/wave.svg')] bg-repeat-x"
         animate={{ y: [0, 15, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        style={{ backgroundColor: `rgba(0, 0, 50, ${scrollDepth * 0.5})` }} // Darker as you scroll
+       // style={{ backgroundColor: `rgba(0, 0, 50, ${scrollDepth * 0.9})` }} // Darker as you scroll
       />
 
       {/* Content */}
       <div className="max-w-4xl mx-auto mt-24 mb-8 relative">
-        <h1 className="text-4xl md:text-7xl font-bold mb-4">
+        <h1 className="text-4xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-[#6c84c3] to-[#1b4679] bg-clip-text text-transparent">
           Welcome to Elorca Port
         </h1>
         <p className="text-lg md:text-xl bg-gradient-to-r from-[#8b98ba] to-[#081b33] bg-clip-text text-transparent mb-6">
@@ -62,7 +62,11 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Center - Port Image */}
-        <motion.div className="mx-auto mt-20 mb-32">
+        <motion.div 
+          className="mx-auto mt-20 mb-32"
+          animate={{ y: [0, 12, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}  
+        >
           <img src="/port-bg.png" alt="Elorca Port" width={850} height={500} className="mx-auto" />
         </motion.div>
 

@@ -9,9 +9,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // server: {
-  //   proxy: {
-  //     '/api': 'http://localhost:8000'
-  //   },
-  // },
+  server: {
+    allowedHosts: ["1d22-2409-40c2-1-1296-cd8e-9d62-e2fb-9987.ngrok-free.app"],
+  },
 })

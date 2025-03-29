@@ -59,7 +59,7 @@
 }
 
 .bg-color {
-  background: linear-gradient(to top, #87CEEB, #e5e9ea);
+  background: linear-gradient(to top, rgb(79, 128, 188), #cfe2e7);
 }
 
 @layer base {
@@ -70,11 +70,6 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* .bg-color {
-  background: rgb(97,163,202);
-background: linear-gradient(86deg, rgba(97,163,202,0.969152626871061) 0%, rgba(246,248,253,1) 100%); */
-/* } */
 
 .title-text-color {
   background: linear-gradient(86deg, rgba(61,160,219,0.969) 0%, rgba(246,248,253,1) 100%);
